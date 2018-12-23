@@ -1,2 +1,2 @@
 # app-logging
-A script to write Cura LulzBot Edition logs to file
+A script to write linux application logs to file
