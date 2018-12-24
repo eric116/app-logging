@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "What is the name of the application you wish to log? (ex. firefox-esr, cura-lulzbot, nautilus, etc.)"
+echo "What is the name of the application you wish to log? (ex. cura-lulzbot, evolution, etc.)"
 read varApp
 echo "Great, where shall we stash the logs for "$varApp"?"
 read -p "Enter file path ["$HOME"/logs/"$varApp"]:" varFilepath
