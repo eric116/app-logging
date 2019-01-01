@@ -16,7 +16,7 @@ if [ ! -d $HOME/bin ]; then
 	echo $HOME/bin" not found, so I'll create it and put the executable there."
 	mkdir -p $HOME/bin
 else
-	echo $HOME"/bin exits, so I'll put the executable there."
+	echo $HOME"/bin exists, so I'll put the executable there."
 fi
 cd $HOME/bin
 printf "#!/bin/sh \nscript $varFilepath/\`date +\"%%Y%%m%%d%%H%%M%%S\"\`.log -f -c $varApp" > log-$varApp.sh
