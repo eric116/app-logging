@@ -1,9 +1,15 @@
 #!/bin/sh
 echo "What is the name of the application you wish to log? (ex. cura-lulzbot, evolution, etc.)"
 read varApp
-echo "Great, where shall we stash the logs for "$varApp"?"
-read -p "Enter file path ["$HOME"/logs/"$varApp"]:" varFilepath
-varFilepath=${filepath:-$HOME/logs/$varApp}
+echo "Great, let's figure out where to stash the logs for "$varApp
+echo "Use default file path? ["$HOME"/logs/"$varApp"] (y/n)"
+read yn
+if [ "$yn" = "y" ]; then
+	varFilepath=${filepath:-$HOME/logs/$varApp}	
+else
+	read -p "Enter file path: " varFilepath
+fi
+
 echo "Coolio, I'll stash the logs in "$varFilepath"."
 if [ ! -d $varFilepath ]; then
 	echo $varFilepath" not found, so I'll create it."
